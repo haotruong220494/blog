@@ -1,0 +1,157 @@
+body {
+  background-color: #272822;
+  color: #d2d2d2;
+  font-weight: 400;
+  font-size: 14px;
+  font-family: "Menlo", "Meslo LG", monospace;
+  line-height: 1.725;
+}
+.container {
+  width: 650px;
+  height: 100%;
+  margin: auto;
+}
+.row {
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.col-lg-2 {
+  flex: 0 0 16.666667%;
+  max-width: 16.666667%;
+  position: relative;
+  min-height: 1px;
+}
+.col-lg-4 {
+  flex: 0 0 33.333333%;
+  max-width: 33.333333%;
+  position: relative;
+  min-height: 1px;
+}
+.col-lg-6 {
+  flex: 0 0 50%;
+  max-width: 50%;
+  position: relative;
+  min-height: 1px;
+}
+.col-lg-8 {
+  flex: 0 0 66.666667%;
+  max-width: 66.666667%;
+  position: relative;
+  min-height: 1px;
+}
+.col-lg-10 {
+  flex: 0 0 83.333333%;
+  max-width: 83.333333%;
+  position: relative;
+  min-height: 1px;
+}
+.float-left {
+  float: left;
+}
+.float-right {
+  float: right;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+.text-center {
+  text-align: center;
+}
+
+a {
+  color: #E6DB74;
+  text-decoration: none;
+}
+a:hover {
+  color: #66D9EF;
+}
+
+.header {
+  text-align: center;
+}
+.header .logo .img-logo {
+  width: 200px;
+}
+.header .name-author {
+  font-weight: bold;
+  font-size: 24px;
+}
+.header .name-author .name {
+  color: #FF9800;
+}
+.header .description-author p {
+  color: #66D9EF;
+}
+.header .section-breadcrumb .breadcrumb {
+  margin-bottom: 20px;
+  list-style: none;
+  padding: 8px 15px;
+  text-align: center;
+}
+.header .section-breadcrumb .breadcrumb li {
+  display: inline-block;
+}
+.header .section-breadcrumb .breadcrumb li a{
+  font-size: 18px;
+}
+.header .section-breadcrumb .breadcrumb>li+li:before {
+  padding: 0 5px;
+  color: #ccc;
+  content: "&\00a0";
+}
+.header .section-breadcrumb .breadcrumb-hr  {
+  margin-top: -15px;
+  margin-bottom: -15px;
+  border-color: #58606b;
+}
+.content .welcome p {
+  color: #E6DB74;
+}
+.content .welcome p .name-account {
+  color:  #FF9800;
+  font-weight: bold;
+}
+.content .title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 25px;
+}
+.content .title span {
+  color: #F92672;
+}
+.content .list-article .article {
+  padding-left: 25px;
+  padding-right: 25px;
+  height: 30px;
+  color: #E6DB74;
+}
+.content .list-article .article .title-article {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.content .pagination {
+  color: #F92672;
+  font-size:  20px;
+}
+.content .form-login {
+  border: 1px dashed #E6DB74;
+  padding: 131px;
+  text-align: center;
+}
+.content .form-login a {
+  background: #3b5998;
+  color: #f7f7f7;
+  border-radius: 5px;
+  padding: 10px;
+}
+.footer {
+  text-align: center;
+  margin-top: 30px;
+  color: #E6DB74;
+}

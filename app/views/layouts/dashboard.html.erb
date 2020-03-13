@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="author" content="Hảo Trương">
+  <title>HT</title>
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  <meta name="description" content="Ngày đó chở theo ánh mắt trong trẻo nhìn cuộc đời không một chút hoài nghi, thế giới trong đồng tử của một đứa trẻ con bao giờ cũng đẹp tuyệt.">
+  <meta property="og:image" content="<%= image_url('logo.png') %>">
+  <%= favicon_link_tag asset_path("logo.png"), :rel => "icon", :type => "image/x-icon" %>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track": "reload" %>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="logo">
+        <%= image_tag("logo.png",alt: "Logo", class: "img-logo") %>
+      </div>
+      <div class="name-author">
+        <span><<span>%</span><span>=</span></span>
+        <span class="name">Ruby On Rails</span>
+        <span><span>%</span><span>></span></span>
+      </div>
+      <div class="description-author">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius debitis eligendi amet ab voluptatem nam. Animi iusto similique soluta at fuga, minus maxime laudantium atque eveniet ipsa aperiam cum nam.</p>
+      </div>
+      <div class="section-breadcrumb">
+        <ul class="breadcrumb">
+          <li><a href=""><i class="fab fa-facebook"></i></a></li>
+          <li><a href=""><i class="fab fa-instagram"></i></a></li>
+          <li><a href=""><i class="fab fa-github"></i></a></li>
+          <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
+          <li><a href=""><i class="fab fa-twitter"></i></a></li>
+        </ul>
+        <hr class="breadcrumb-hr">
+      </div>
+    </div>
+    <div class="content">
+      <div class="welcome">
+        <p>Welcome <span class="name-account">Lorem</span>. Lorem ipsum dolor sit amet, consectetur adipisicing !</p>
+      </div>
+      <div class="form-login">
+        <a href="">
+          <i class="fab fa-facebook-f"></i> <span>Login with facebook</span>
+        </a>
+      </div>
+    </div>
+    <div class="footer">
+      <p>Copyright © 2020</p>
+    </div>
+  </div>
+</body>
+</html>

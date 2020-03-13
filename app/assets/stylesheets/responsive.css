@@ -1,0 +1,24 @@
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 768px) {
+  .container {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+  }
+  .header .logo .img-logo {
+    width: 125px;
+  }
+  .content .form-login {
+    padding: 75px 50px;
+  }
+}
+@media only screen and (max-width : 1024px) {
+  .container {
+    width: 90%;
+    height: 100%;
+    margin: auto;
+  }
+  .content {
+    min-height: 54vh;
+  }
+}
