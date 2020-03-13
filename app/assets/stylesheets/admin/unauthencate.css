@@ -11,3 +11,6 @@
   text-align: center;
   width: 100%;
 }
+.alert p {
+  margin-bottom: 0;
+}
