@@ -1,0 +1,13 @@
+.unauthencate {
+  height: auto;
+  position: relative;
+}
+.unauthencate .form-login {
+  margin: 25% auto;
+}
+.unauthencate .footer-unauthencate {
+  position: absolute;
+  bottom: 20px;
+  text-align: center;
+  width: 100%;
+}
