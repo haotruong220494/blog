@@ -12,6 +12,7 @@
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
   <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track": "reload" %>
+  <%= javascript_include_tag "application", "data-turbolinks-track": "reload" %>
 </head>
 <body>
   <div class="container">
@@ -39,14 +40,81 @@
       </div>
     </div>
     <div class="content">
-      <div class="welcome">
-        <p>Welcome <span class="name-account">Lorem</span>. Lorem ipsum dolor sit amet, consectetur adipisicing !</p>
-      </div>
-      <div class="form-login">
-        <a href="">
-          <i class="fab fa-facebook-f"></i> <span>Login with facebook</span>
-        </a>
-      </div>
+
+      <% if account_signed_in? %>
+        <div class="welcome">
+          <p>
+            Welcome
+            <span class="name-account">
+              <%= current_account.name %>
+              <%= link_to destroy_account_session_path do %>
+                <i class="fas fa-sign-out-alt"></i>
+              <% end %>
+            </span>.
+            Lorem ipsum dolor sit amet, consectetur adipisicing !
+          </p>
+        </div>
+
+        <div class="content-detail">
+          <div class="title">
+            < <span>2020</span> />
+          </div>
+          <div class="list-article">
+            <div class="article">
+              <div class="row">
+                <div class="col-lg-6 title-article"><a href="">Hexo Geek 主题 v0.1 正式发布</a></div>
+                <div class="col-lg-6 text-right">January 8th</div>
+              </div>
+            </div>
+            <div class="article">
+              <div class="row">
+                <div class="col-lg-6 title-article"><a href="">Hexo Geek 主题 v0.1 正式发布</a></div>
+                <div class="col-lg-6 text-right">January 8th</div>
+              </div>
+            </div>
+          </div>
+          <div class="title">
+            < <span>2019</span> />
+          </div>
+          <div class="list-article">
+            <div class="article">
+              <div class="row">
+                <div class="col-lg-6 title-article"><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing !</a></div>
+                <div class="col-lg-6 text-right">January 8th</div>
+              </div>
+            </div>
+            <div class="article">
+              <div class="row">
+                <div class="col-lg-6 title-article"><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing !</a></div>
+                <div class="col-lg-6 text-right">January 8th</div>
+              </div>
+            </div>
+            <div class="article">
+              <div class="row">
+                <div class="col-lg-6 title-article"><a href="">Lorem ipsum dolor sit amet, consectetur adipisicing !</a></div>
+                <div class="col-lg-6 text-right">January 8th</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pagination row">
+          <div class="prev col-lg-6 text-left">
+            <i class="far fa-hand-point-left"></i>
+          </div>
+          <div class="next col-lg-6 text-right">
+            <i class="far fa-hand-point-right"></i>
+          </div>
+        </div>
+      <% else %>
+          <div class="welcome">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum expedita </p>
+          </div>
+        <div class="form-login">
+          <%= link_to(account_facebook_omniauth_authorize_path) do %>
+            <i class="fab fa-facebook-f"></i> <span>Login with facebook</span>
+          <% end %>
+        </div>
+      <% end %>
     </div>
     <div class="footer">
       <p>Copyright © 2020</p>

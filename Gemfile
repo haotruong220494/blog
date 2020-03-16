@@ -39,3 +39,13 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "devise", "~> 4.7", ">= 4.7.1"
+
+# Authenticate Social
+gem "koala"
+gem "omniauth-facebook", "~> 6.0"
+
+# Render error
+gem "simple_form"
+
+# ENV
+gem "figaro"
