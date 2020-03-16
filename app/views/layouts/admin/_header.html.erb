@@ -101,8 +101,9 @@
       </div>
     </li>
     <li class="nav-item">
-      <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="/"><i
-          class="fas fa-th-large"></i></a>
+      <%= link_to destroy_admin_admin_session_path, class: "nav-link" do %>
+        <i class="fas fa-sign-out-alt"></i>
+      <% end %>
     </li>
   </ul>
 </nav>
