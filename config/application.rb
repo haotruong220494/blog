@@ -19,5 +19,6 @@ module Blog
     config.i18n.load_path += Dir[Rails.root.join("config",
       "locales", "**", "*.{rb,yml}").to_s]
     config.i18n.default_locale = :vi
+    config.assets.paths << Rails.root.join("app", "assets", "fonts")
   end
 end
