@@ -58,3 +58,16 @@ gem "simple_form"
 
 # ENV
 gem "figaro"
+
+# Editor
+gem "ckeditor"
+
+# search
+gem "ransack"
+
+# Paginate
+gem "kaminari"
+gem "bootstrap-kaminari-views"
+
+# Support
+gem "config"

@@ -34,3 +34,7 @@ config/deploy/settings.yml
 
 # ignore database config it will base on owner development
 config/database.yml
+
+config/settings.local.yml
+config/settings/*.local.yml
+config/environments/*.local.yml

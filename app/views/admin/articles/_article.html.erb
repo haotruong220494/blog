@@ -1,0 +1,9 @@
+<tr>
+  <td style="width: 30%"></i><%= article.title %></td>
+  <td style="width: 20%"><%=raw truncate(article.content , length: 30, omission: '...') %></td>
+  <td style="width: 30%"><%= article.slug %></td>
+  <td>
+    <i class="far fa-edit"></i>
+    <i class="far fa-trash-alt"></i>
+  </td>
+</tr>

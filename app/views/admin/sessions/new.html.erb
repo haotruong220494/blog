@@ -1,6 +1,6 @@
 <%= render "shared/flash" %>
 <div class="card card-info">
-  <div class="card-header">
+  <div class="card-header text-white bg-dark">
     <h3 class="card-title"><%= t(".login_form")%></h3>
   </div>
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -30,7 +30,7 @@
     </div>
     <div class="card-footer">
       <%= f.submit t(".submit"),
-        class: "form-control btn btn-info" %>
+        class: "form-control btn btn-dark text-white bg-dark " %>
     </div>
   <% end %>
 </div>
