@@ -1,4 +1,4 @@
 per_page:
-  default: 20
+  default: 10
 date:
   formats: "%d-%m-%Y"

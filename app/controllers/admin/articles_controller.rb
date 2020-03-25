@@ -11,23 +11,31 @@ class Admin::ArticlesController < Admin::BaseController
   def create
     @article = Article.new params_article
     if @article.save
-      flash[:success] = "Create Post Success!"
+      flash[:success] = "Create article success!"
       redirect_to admin_articles_path
     else
       render "new"
     end
   end
 
-  def edit
+ def edit
+    @article = Article.find_by id: params[:id]
   end
 
   def update
-  end
-
-  def show
+    @article = Article.find_by id: params[:id]
+    if @article.update_attributes params_article
+      flash[:success] = "Update article success!"
+      redirect_to admin_articles_path
+    else
+      render "edit"
+    end
   end
 
   def destroy
+    Article.find_by(id: params[:id]).destroy
+    flash[:success] = "Delete Post Success."
+    redirect_to admin_articles_path
   end
 
   private
