@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="author" content="Hảo Trương">
-  <title>Hảo Trương</title>
+  <title><%= yield(:title) %></title>
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   <meta name="description" content="Ngày đó chở theo ánh mắt trong trẻo nhìn cuộc đời không một chút hoài nghi, thế giới trong đồng tử của một đứa trẻ con bao giờ cũng đẹp tuyệt.">
   <meta property="og:image" content="<%= image_url('logo.png') %>">
@@ -18,7 +18,9 @@
   <div class="container">
     <div class="header">
       <div class="logo animated fadeInDown">
-        <%= image_tag("logo.png",alt: "Logo", class: "img-logo") %>
+        <%= link_to root_path do %>
+          <%= image_tag("logo.png",alt: "Logo", class: "img-logo") %>
+        <% end %>
       </div>
       <div class="name-author">
         <span><<span>%</span><span>=</span></span>
@@ -40,93 +42,7 @@
       </div>
     </div>
     <div class="content">
-
-      <% if account_signed_in? %>
-        <div class="welcome">
-          <p>
-            Welcome
-            <span class="name-account">
-              <%= current_account.name %>
-              <%= link_to destroy_account_session_path do %>
-                <i class="fas fa-sign-out-alt"></i>
-              <% end %>
-            </span>.
-            Lorem ipsum dolor sit amet, consectetur adipisicing !
-          </p>
-        </div>
-
-        <div class="content-detail">
-          <div class="title">
-            < <span>2020</span> />
-          </div>
-          <div class="list-article">
-            <div class="article">
-              <div class="row">
-                <div class="col-lg-6 title-article"><a href="" title="Chưa từng trải qua 1 điều gì đó tồi tệ như ngày hôm này">Demo </a></div>
-                <div class="col-lg-6 text-right">Mar 17th</div>
-              </div>
-            </div>
-            <div class="article">
-              <div class="row">
-                <div class="col-lg-6 title-article"><a href="">Demo </a></div>
-                <div class="col-lg-6 text-right">January 8th</div>
-              </div>
-            </div>
-             <div class="article">
-              <div class="row">
-                <div class="col-lg-6 title-article"><a href="">Demo </a></div>
-                <div class="col-lg-6 text-right">January 8th</div>
-              </div>
-            </div>
-             <div class="article">
-              <div class="row">
-                <div class="col-lg-6 title-article"><a href="">Demo </a></div>
-                <div class="col-lg-6 text-right">January 8th</div>
-              </div>
-            </div>
-             <div class="article">
-              <div class="row">
-                <div class="col-lg-6 title-article"><a href="">Demo </a></div>
-                <div class="col-lg-6 text-right">January 8th</div>
-              </div>
-            </div>
-             <div class="article">
-              <div class="row">
-                <div class="col-lg-6 title-article"><a href="">Demo </a></div>
-                <div class="col-lg-6 text-right">January 8th</div>
-              </div>
-            </div>
-             <div class="article">
-              <div class="row">
-                <div class="col-lg-6 title-article"><a href="">Demo </a></div>
-                <div class="col-lg-6 text-right">January 8th</div>
-              </div>
-            </div> <div class="article">
-              <div class="row">
-                <div class="col-lg-6 title-article"><a href="">Demo </a></div>
-                <div class="col-lg-6 text-right">January 8th</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- <div class="pagination row">
-          <div class="prev col-lg-6 text-left">
-            <i class="far fa-hand-point-left"></i>
-          </div>
-          <div class="next col-lg-6 text-right">
-            <i class="far fa-hand-point-right"></i>
-          </div>
-        </div> -->
-      <% else %>
-          <div class="welcome">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum expedita </p>
-          </div>
-        <div class="form-login">
-          <%= link_to(account_facebook_omniauth_authorize_path) do %>
-            <i class="fab fa-facebook-f"></i> <span>Login with facebook</span>
-          <% end %>
-        </div>
-      <% end %>
+      <%= yield %>
     </div>
     <div class="footer">
       <p>Copyright © 2020</p>

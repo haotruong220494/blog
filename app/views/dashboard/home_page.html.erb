@@ -1,1 +1,50 @@
-home_page.html.erb
+<%= provide :title, "Hảo Trương"%>
+<% if account_signed_in? %>
+  <div class="welcome">
+    <p>
+      Welcome
+      <span class="name-account">
+        <%= current_account.name %>
+        <%= link_to destroy_account_session_path do %>
+          <i class="fas fa-sign-out-alt"></i>
+        <% end %>
+      </span>.
+      Lorem ipsum dolor sit amet, consectetur adipisicing !
+    </p>
+  </div>
+  <% if @articles.any? %>
+    <div class="content-detail">
+      <div class="title">
+        < <span>2020</span> />
+      </div>
+      <% @articles.each do |article| %>
+        <div class="list-article">
+          <div class="article">
+            <div class="row">
+              <div class="col-lg-6 title-article">
+                <%= link_to article.title , article_path(article) %>
+              </div>
+              <div class="col-lg-6 text-right"><%= article.created_at.strftime(Settings.date.formats) %></div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+      <%= paginate @articles, theme: "front" %>
+    </div>
+  <% else %>
+  <% end %>
+<% else %>
+  <div class="welcome">
+    <div class="dynamic-title cd-headline clip is-full-width">
+      <span class="cd-words-wrapper">
+        <b class="is-visible">&nbsp;<span class="gold-title">Đừng làm mòn giá trị của bản thân bởi việc so sánh với người khác</span></b>
+        <b>&nbsp;<span class="gold-title">Bởi mỗi trong chúng ta đều là những người đặc biệt.</span></b>
+      </span>
+    </div>
+  </div>
+  <div class="form-login">
+    <%= link_to(account_facebook_omniauth_authorize_path) do %>
+      <i class="fab fa-facebook-f"></i> <span>Login with facebook</span>
+    <% end %>
+  </div>
+<% end %>

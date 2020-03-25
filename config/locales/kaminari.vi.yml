@@ -6,6 +6,8 @@ vi:
       previous: "Prev"
       next: "Next"
       truncate: "&hellip;"
+      next_client: "<i class='far fa-arrow-alt-circle-right'></i>"
+      previous_client: "<i class='far fa-arrow-alt-circle-left'></i>"
   helpers:
     page_entries_info:
       one_page:

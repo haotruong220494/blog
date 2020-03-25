@@ -8,4 +8,5 @@ Rails.application.routes.draw do
 
   root "dashboard#home_page"
   devise_for :accounts, controllers: {omniauth_callbacks: "accounts/omniauth_callbacks"}
+  resources :articles, only: :show, param: :slug
 end

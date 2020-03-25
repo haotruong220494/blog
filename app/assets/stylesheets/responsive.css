@@ -11,6 +11,9 @@
   .content .form-login {
     padding: 75px 50px;
   }
+  .content .list-article .article {
+    padding: 0;
+  }
 }
 @media only screen and (max-width : 1024px) {
   .container {
@@ -19,6 +22,6 @@
     margin: auto;
   }
   .content {
-    min-height: 54vh;
+    min-height: 50vh;
   }
 }
