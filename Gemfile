@@ -61,6 +61,7 @@ gem "figaro"
 
 # Editor
 gem "ckeditor"
+gem "mini_magick"
 
 # search
 gem "ransack"

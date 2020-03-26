@@ -12,6 +12,5 @@ Rails.application.config.assets.precompile += %w(
   application_*.css
   application_*.js
   article_layout.js
-  ckeditor/config.js
 )
 

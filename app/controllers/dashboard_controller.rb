@@ -3,6 +3,6 @@ class DashboardController < ApplicationController
 
   def home_page
     @q = Article.ransack params[:q]
-    @articles = @q.result.page(params[:page]).per Settings.per_page.client
+    @articles = @q.result.page(params[:page]).per(Settings.per_page.client).order("created_at DESC")
   end
 end
