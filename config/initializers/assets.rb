@@ -11,6 +11,7 @@ Rails.application.config.assets.paths << Rails.root.join("node_modules")
 Rails.application.config.assets.precompile += %w(
   application_*.css
   application_*.js
+  article_layout.js
+  ckeditor/config.js
 )
 
-Rails.application.config.assets.precompile += %w(ckeditor/config.js)

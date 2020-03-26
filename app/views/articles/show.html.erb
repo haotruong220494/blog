@@ -1,3 +1,12 @@
 <%= provide :title, "Hảo Trương | " + @article.title %>
+<div class="article-title">
+  <%= link_to root_path do %>
+    <i class="fa fa-reply-all btn-reply"></i>
+  <% end %>
+  <p>
+    <%= @article.title %>
+  </p>
+</div>
+<hr class="breadcrumb-hr">
 <%=raw @article.content %>
 
