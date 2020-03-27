@@ -282,9 +282,12 @@ a:hover {
   padding: 10px;
 }
 .footer {
+  position: fixed;
   text-align: center;
   margin-top: 20px;
   color: #E6DB74;
+  width: 650px;
+  bottom: 0;
 }
 .front-pagination {
   position: relative;

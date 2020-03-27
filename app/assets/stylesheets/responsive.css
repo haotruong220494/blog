@@ -14,7 +14,8 @@
   .content .list-article .article {
     padding: 0;
   }
-  #toTop {
+  #toTop,
+  .footer {
     display: none !important;
   }
 }
@@ -23,8 +24,5 @@
     width: 90%;
     height: 100%;
     margin: auto;
-  }
-  .content {
-    min-height: 50vh;
   }
 }
