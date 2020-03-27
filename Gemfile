@@ -72,3 +72,4 @@ gem "bootstrap-kaminari-views"
 
 # Support
 gem "config"
+gem "lazyload-rails"

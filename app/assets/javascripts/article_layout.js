@@ -14,3 +14,5 @@
 //= require jquery_ujs
 //= require ./particles/particles
 //= require ./particles/app
+//= require jquery.lazyload
+//= require_tree ./article
