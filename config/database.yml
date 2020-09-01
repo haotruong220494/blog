@@ -28,4 +28,3 @@ staging:
 production:
   <<: *default
   database: blog_production
-

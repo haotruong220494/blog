@@ -62,9 +62,9 @@ body {
 blockquote {
   margin: 0;
   background: inherit;
-  color: #2bbc8a;
+  color: #FF9800;
   padding-left: 15px;
-  border-left: 3px solid #2bbc8a;
+  border-left: 3px solid #FF9800;
   background: none;
 }
 
@@ -337,7 +337,7 @@ a:hover {
 .article-content {
   background: #000000ad;
   border-radius: 10px;
-  color: #dfa000;
+  color: #E6DB74;
   padding: 1px 15px;
 }
 .article-content img {
@@ -357,4 +357,10 @@ a:hover {
   display: none;
   padding-top: 15px;
   cursor: pointer;
+}
+
+#toTop:hover {
+  background: #fff;
+  color: #164070;
+  border: 1px dashed #164070;
 }
